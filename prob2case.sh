@@ -61,7 +61,6 @@ done
 read -p "Enter number in order of 1,10,100...(max:million): " ord
 for num in $ord
 do
-
         case "$num" in
                 1) echo "Units"
                         ;;
@@ -95,18 +94,18 @@ do
 				;;
 		2) echo  "2)Feet to meter:"
                         read -p "Enter value for ft: " ft
-                        mt=$(($ft*0.3048))
-   		        echo "$ft Feet is equal to $mt meters"
+                       
+   		       	perl -E "say ($ft*0.3048)"  echo "metre is equal to $ft feet"
                                 ;;
 		3) echo  "3)Inch to Feet:"
                         read -p "Enter value for Inches: " inc
                         ft=$(($inc/12))
-                        echo "$inc Inches is equal to $ft feet"
+                        perl -E "say ($inc/12)" echo "inches is equal to $ft feet"
                                 ;;
 		4) echo  "4)Meter to Feet:"
                         read -p "Enter value for meters: " mt
-                        ft=$(($mt*3.2808)) 
-                        echo "$mt Meters is equal to $ft feet"
+        
+                         perl -E "say ($mt*3.2808)" echo "feet is equal to $mt metres"
                                 ;;
 		*) echo "Error"
 				;;
