@@ -2,13 +2,13 @@
 
 parttime=1;
 fulltime=2;
-rateperhr=100;
+rateperhr=150;
 randomcheck=$((RANDOM%3));
 
 if [ $fulltime -eq $randomcheck ]; then
 	emphrs=8;
 elif [ $parttime -eq $randomcheck ]; then
-	emphrs=4;
+	emphrs=6;
 else
  	emphrs=0;
 fi
