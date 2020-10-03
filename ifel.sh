@@ -2,7 +2,7 @@
 
 parttime=1;
 fulltime=2;
-rateperhr=100;
+rateperhr=200;
 randomcheck=$((RANDOM%3));
 
 if [ $fulltime -eq $randomcheck ]; then
@@ -12,6 +12,6 @@ elif [ $parttime -eq $randomcheck ]; then
 else
  	emphrs=0;
 fi
-
+echo "salary"
 salary=$(($emphrs*$rateperhr));
 
